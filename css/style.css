@@ -1,0 +1,315 @@
+/* ========== RESET Y CONFIGURACIÓN GLOBAL ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ========== HEADER Y NAVEGACIÓN (FLEXBOX) ========== */
+header {
+    background-color: #1b4332;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    padding: 18px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    color: #ffb703;
+    text-shadow: 0 0 8px rgba(255, 183, 3, 0.6);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ========== MAIN CONTENT ========== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== SECCIÓN HERO CON IMAGEN DE FONDO ========== */
+.seccion-hero {
+    background-image: url("../images/1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.seccion-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.seccion-hero .hero-contenido {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #ffffff;
+    padding: 40px;
+}
+
+.seccion-hero h1 {
+    font-size: 52px;
+    font-weight: 700;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
+}
+
+.seccion-hero p {
+    font-size: 20px;
+    font-weight: 300;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* ========== SECCIONES GENERALES ========== */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-size: 32px;
+    color: #1b4332;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== SECCIÓN QUIÉNES SOMOS ========== */
+#quienes-somos p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #444;
+}
+
+/* ========== TABLA ITINERARIO DE TOURS ========== */
+#itinerario {
+    background-color: #ffffff;
+    padding: 60px 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+#itinerario h2 {
+    margin-bottom: 35px;
+}
+
+#itinerario .table {
+    margin: 0 auto;
+    max-width: 900px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#itinerario .table th,
+#itinerario .table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px 20px;
+    font-size: 16px;
+}
+
+#itinerario .table thead th {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#itinerario .table tbody tr:hover {
+    background-color: #e8f5e9 !important;
+    transition: background-color 0.3s ease;
+}
+
+/* ========== LISTA ORDENADA (PASOS PARA RESERVAR) ========== */
+#reserva {
+    background-color: #f9f9f9;
+    padding: 60px 40px;
+}
+
+#reserva ol {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 2.2;
+    padding-left: 30px;
+    counter-reset: paso;
+}
+
+#reserva ol li {
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border-left: 5px solid #2d6a4f;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#reserva ol li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== ASIDE (TESTIMONIOS) ========== */
+aside {
+    background: linear-gradient(135deg, #1b4332, #2d6a4f);
+    color: #ffffff;
+    padding: 50px 40px;
+    margin: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+aside h3 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+aside blockquote {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.7;
+    border-left: 4px solid #ffb703;
+    padding-left: 25px;
+}
+
+aside blockquote footer {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+    color: #ffb703;
+}
+
+/* ========== CARRUSEL BOOTSTRAP ========== */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel {
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 25px;
+    background-size: 55%;
+}
+
+.carousel-indicators button {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background-color: #0d1f17;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 15px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer small {
+    color: #aaa;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav li {
+        padding: 10px 0;
+    }
+
+    .seccion-hero {
+        height: 400px;
+    }
+
+    .seccion-hero h1 {
+        font-size: 32px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    #itinerario,
+    #reserva {
+        padding: 40px 20px;
+    }
+
+    .carousel-item img {
+        height: 300px;
+    }
+}
